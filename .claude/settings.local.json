@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:freeconsul.co.jp)",
+      "WebFetch(domain:neural-opt.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
