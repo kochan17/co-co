@@ -1,0 +1,62 @@
+{
+  "defaultTemplate": "company-template.pptx",
+  "branding": {
+    "companyName": "株式会社CoCo",
+    "logoPath": "./assets/logo.png",
+    "primaryColor": "#007acc",
+    "secondaryColor": "#6c757d",
+    "accentColor": "#28a745",
+    "backgroundColor": "#f8f9fa"
+  },
+  "slideSettings": {
+    "width": 13.33,
+    "height": 7.5,
+    "unit": "inches",
+    "defaultFontSize": 18,
+    "titleFontSize": 28,
+    "headerFontSize": 22
+  },
+  "layout": {
+    "headerHeight": 0.8,
+    "footerHeight": 0.6,
+    "contentMarginTop": 1.2,
+    "contentMarginBottom": 1.0,
+    "contentMarginLeft": 0.8,
+    "contentMarginRight": 0.8
+  },
+  "templates": {
+    "company-template": {
+      "name": "会社紹介テンプレート",
+      "description": "ブランディング重視のプレゼン用",
+      "headerElements": ["logo", "companyName"],
+      "footerElements": ["pageNumber", "date", "copyright"]
+    },
+    "technical-template": {
+      "name": "技術資料テンプレート",
+      "description": "エンジニア向け技術説明用",
+      "headerElements": ["title", "section"],
+      "footerElements": ["pageNumber", "confidential"]
+    },
+    "proposal-template": {
+      "name": "提案書テンプレート",
+      "description": "営業・企画提案用",
+      "headerElements": ["logo", "proposalTitle"],
+      "footerElements": ["pageNumber", "date", "contactInfo"]
+    }
+  },
+  "outputSettings": {
+    "fileNaming": "{projectName}_{templateType}_{YYYYMMDD}_{HHMMSS}.pptx",
+    "compressionLevel": "medium",
+    "embedFonts": true,
+    "exportPDF": false
+  },
+  "contentProcessing": {
+    "maxTextLength": 500,
+    "autoSplitLongContent": true,
+    "preserveHTMLFormatting": true,
+    "convertTablesEnabled": true,
+    "imageAutoResize": true,
+    "imageMaxWidth": 600,
+    "imageMaxHeight": 400
+  }
+}
