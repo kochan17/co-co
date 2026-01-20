@@ -3,7 +3,8 @@
     "allow": [
       "WebSearch",
       "WebFetch(domain:freeconsul.co.jp)",
-      "WebFetch(domain:neural-opt.com)"
+      "WebFetch(domain:neural-opt.com)",
+      "Bash(claude doctor)"
     ],
     "deny": [],
     "ask": []

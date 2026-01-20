@@ -1,0 +1,39 @@
+{
+  "hooks": {
+    "pre-tool-use": {
+      "enabled": false,
+      "command": "",
+      "description": "Runs before any tool is executed"
+    },
+    "post-tool-use": {
+      "enabled": false,
+      "command": "",
+      "description": "Runs after any tool is executed"
+    },
+    "pre-bash": {
+      "enabled": false,
+      "command": "",
+      "description": "Runs before bash commands"
+    },
+    "post-bash": {
+      "enabled": false,
+      "command": "",
+      "description": "Runs after bash commands"
+    },
+    "pre-edit": {
+      "enabled": false,
+      "command": "",
+      "description": "Runs before file edits"
+    },
+    "post-edit": {
+      "enabled": false,
+      "command": "",
+      "description": "Runs after file edits"
+    },
+    "user-prompt-submit": {
+      "enabled": false,
+      "command": "",
+      "description": "Runs when user submits a prompt"
+    }
+  }
+}

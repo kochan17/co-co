@@ -1,0 +1,18 @@
+{
+  "statusLine": {
+    "enabled": true,
+    "style": "compact"
+  },
+  "outputStyle": {
+    "enabled": true,
+    "style": "default"
+  },
+  "hooks": {
+    "enabled": true
+  },
+  "preferences": {
+    "autoSave": true,
+    "confirmBeforeRunning": false,
+    "showLineNumbers": true
+  }
+}

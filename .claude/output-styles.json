@@ -1,0 +1,55 @@
+{
+  "styles": {
+    "default": {
+      "name": "Default",
+      "description": "Standard Claude Code output formatting",
+      "colors": {
+        "primary": "#007acc",
+        "secondary": "#6c757d",
+        "success": "#28a745",
+        "warning": "#ffc107",
+        "error": "#dc3545",
+        "info": "#17a2b8"
+      },
+      "formatting": {
+        "codeBlock": {
+          "background": "#f8f9fa",
+          "border": "1px solid #e9ecef",
+          "borderRadius": "4px",
+          "padding": "12px"
+        },
+        "inline": {
+          "background": "#f1f3f4",
+          "padding": "2px 4px",
+          "borderRadius": "2px"
+        }
+      }
+    },
+    "minimal": {
+      "name": "Minimal",
+      "description": "Clean, minimal output with reduced visual elements",
+      "colors": {
+        "primary": "#333333",
+        "secondary": "#666666",
+        "success": "#4caf50",
+        "warning": "#ff9800",
+        "error": "#f44336",
+        "info": "#2196f3"
+      },
+      "formatting": {
+        "codeBlock": {
+          "background": "transparent",
+          "border": "none",
+          "borderRadius": "0px",
+          "padding": "8px"
+        },
+        "inline": {
+          "background": "transparent",
+          "padding": "0px",
+          "borderRadius": "0px"
+        }
+      }
+    }
+  },
+  "activeStyle": "default"
+}
