@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "google-sheets": {
+      "command": "/Users/kotaishida/.local/bin/uv",
+      "args": [
+        "tool",
+        "run",
+        "mcp-google-sheets"
+      ],
+      "env": {
+        "SERVICE_ACCOUNT_PATH": "/Users/kotaishida/.config/mcp-google-sheets/service-account.json",
+        "DRIVE_FOLDER_ID": "1cBaemjBD6Pd_JfoHDXm7Vcj-iscvOvFJ"
+      }
+    }
+  }
+}
