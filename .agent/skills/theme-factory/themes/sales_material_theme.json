@@ -1,0 +1,28 @@
+{
+  "name": "Modern Gradient Clarity",
+  "description": "High-impact sales material theme with purple-to-orange gradients and rich black typography for maximum clarity and premium feel.",
+  "colors": {
+    "accent_primary": "#8A2BE2",
+    "accent_secondary": "#FF8C00",
+    "accent_gradient": "linear-gradient(to right, #8A2BE2, #FF8C00)",
+    "background": "#FFFFFF",
+    "text_primary": "#1A0A2A",
+    "text_secondary": "#585060",
+    "divider": "#E0E0E0"
+  },
+  "typography": {
+    "header": {
+      "font_family": "Noto Sans JP",
+      "font_weight": "bold"
+    },
+    "body": {
+      "font_family": "Noto Sans JP",
+      "font_weight": "normal"
+    }
+  },
+  "visual_identity": {
+    "focus": "data_visualization",
+    "style": "clean_premium",
+    "gradient_usage": ["highlights", "cta", "dividers"]
+  }
+}
