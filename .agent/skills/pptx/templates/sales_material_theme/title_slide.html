@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/base.css">
@@ -11,43 +12,52 @@
             z-index: 1;
         }
 
-        .title-accent-shape {
+        .title-accent-img {
             position: absolute;
-            bottom: -50pt;
-            right: -50pt;
-            width: 300pt;
-            height: 300pt;
-            background: var(--accent-gradient);
-            border-radius: 50pt;
+            bottom: -100pt;
+            right: -100pt;
+            width: 400pt;
+            height: 400pt;
             transform: rotate(-15deg);
-            opacity: 0.9;
             z-index: 0;
         }
 
-        .subtitle {
-            margin-top: 10pt;
-            font-size: 24pt;
-            border-left: 4pt solid var(--accent-purple);
+        .subtitle-box {
+            margin-top: 15pt;
+            border-left: 5pt solid #8A2BE2;
             padding-left: 15pt;
+        }
+
+        .subtitle {
+            font-size: 24pt;
+            color: var(--text-secondary);
         }
 
         .company-info {
             margin-top: 40pt;
+        }
+
+        .info-text {
             font-size: 14pt;
+            color: var(--text-secondary);
         }
     </style>
 </head>
+
 <body>
-    <div class="title-accent-shape"></div>
+    <img src="assets/accent_large.png" class="title-accent-img">
     <div class="slide-content">
-        <h1>タイトルをここに入力</h1>
-        <div class="subtitle text-secondary">サブタイトル・資料の目的を記述します</div>
-        
-        <div class="company-info text-secondary">
-            株式会社ユニ<br>
-            2026年1月27日
+        <h1><span>タイトルをここに入力</span></h1>
+        <div class="subtitle-box">
+            <span class="subtitle">サブタイトル・資料の目的を記述します</span>
+        </div>
+
+        <div class="company-info">
+            <p class="info-text">株式会社ユニ</p>
+            <p class="info-text">2026年1月28日</p>
         </div>
     </div>
-    <div class="footer">Confidential | © Uni Inc.</div>
+    <div class="footer"><span>Confidential | © Uni Inc.</span></div>
 </body>
+
 </html>

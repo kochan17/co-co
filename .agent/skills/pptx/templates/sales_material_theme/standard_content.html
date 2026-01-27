@@ -5,33 +5,32 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/base.css">
   <style>
+    .header-area {
+      position: relative;
+      margin-bottom: 25pt;
+    }
+
     .content-area {
       margin-top: 20pt;
     }
 
     ul {
-      list-style: none;
+      margin-left: 20pt;
     }
 
     li {
       margin-bottom: 12pt;
-      position: relative;
-      padding-left: 20pt;
-    }
-
-    li::before {
-      content: '●';
-      position: absolute;
-      left: 0;
-      color: var(--accent-orange);
-      font-size: 14pt;
     }
 
     .highlight-box {
       margin-top: 30pt;
       padding: 15pt;
       background-color: var(--gray-light);
-      border-left: 5pt solid var(--accent-purple);
+      border-left: 5pt solid #8A2BE2;
+    }
+
+    .highlight-text {
+      font-size: 18pt;
       font-weight: bold;
     }
   </style>
@@ -39,21 +38,24 @@
 
 <body>
   <div class="slide-content">
-    <h2 class="header-with-line">標準コンテンツのタイトル</h2>
+    <div class="header-area">
+      <h2><span>標準コンテンツのタイトル</span></h2>
+      <img src="assets/accent_line.png" style="width: 60pt; height: 3pt; display: block;">
+    </div>
 
     <div class="content-area">
       <ul>
-        <li>重要なポイントの1つ目をここに記述します。</li>
-        <li>2つ目のポイントも同様に、簡潔にまとめます。</li>
-        <li>情報の詰め込みすぎを避け、余白を活かした配置を心がけます。</li>
+        <li><span>重要なポイントの1つ目をここに記述します。</span></li>
+        <li><span>2つ目のポイントも同様に、簡潔にまとめます。</span></li>
+        <li><span>情報の詰め込みすぎを避け、余白を活かした配置を心がけます。</span></li>
       </ul>
 
       <div class="highlight-box">
-        ここにはスライド全体を通して伝えたい「結論」や「キーメッセージ」を記述します。
+        <p class="highlight-text">ここにはスライド全体を通して伝えたい「結論」や「キーメッセージ」を記述します。</p>
       </div>
     </div>
   </div>
-  <div class="footer">Confidential | 03</div>
+  <div class="footer"><span>Confidential | 03</span></div>
 </body>
 
 </html>

@@ -3,17 +3,19 @@
 :root {
     --accent-purple: #8A2BE2;
     --accent-orange: #FF8C00;
-    --accent-gradient: linear-gradient(to right, #8A2BE2, #FF8C00);
+    /* CSS gradients are NOT supported in PPTX conversion. Using images instead. */
     --bg-white: #FFFFFF;
-    --text-primary: #1A0A2A; /* Rich Black */
+    --text-primary: #1A0A2A;
+    /* Rich Black */
     --text-secondary: #585060;
     --gray-light: #F5F5F5;
     --divider-color: #E0E0E0;
-    
+
     --slide-width: 720pt;
     --slide-height: 405pt;
-    
-    --font-main: 'Noto Sans JP', sans-serif;
+
+    --font-main: Arial, sans-serif;
+    /* Using web-safe fonts as per Anthropic recommendations */
 }
 
 * {
@@ -57,16 +59,20 @@ h2 {
 }
 
 .header-with-line::after {
-    content: '';
+    display: none;
+    /* Borders/Pseudo-elements on text tags are not supported well */
+}
+
+.title-underline {
     position: absolute;
-    bottom: 0;
+    bottom: -5pt;
     left: 0;
     width: 60pt;
     height: 3pt;
-    background: var(--accent-gradient);
 }
 
-p, li {
+p,
+li {
     font-size: 18pt;
     line-height: 1.6;
 }

@@ -8,21 +8,23 @@
     .two-column-container {
       display: flex;
       gap: 40pt;
-      margin-top: 20pt;
-      flex-grow: 1;
+      margin-top: 25pt;
     }
 
     .column {
       flex: 1;
     }
 
+    .column-header-box {
+      border-bottom: 2pt solid var(--divider-color);
+      margin-bottom: 15pt;
+      padding-bottom: 5pt;
+    }
+
     .column-header {
       font-weight: bold;
       font-size: 20pt;
-      margin-bottom: 15pt;
-      color: var(--accent-purple);
-      border-bottom: 1px solid var(--divider-color);
-      padding-bottom: 5pt;
+      color: #8A2BE2;
     }
 
     .card {
@@ -35,38 +37,51 @@
 
     .card-title {
       font-weight: bold;
+      font-size: 16pt;
       margin-bottom: 5pt;
+    }
+
+    .card-text {
+      font-size: 14pt;
+      color: var(--text-secondary);
     }
   </style>
 </head>
 
 <body>
   <div class="slide-content">
-    <h2 class="header-with-line">比較・特徴のタイトル</h2>
+    <div class="header-area">
+      <h2><span>比較・特徴のタイトル</span></h2>
+      <img src="assets/accent_line.png" style="width: 60pt; height: 3pt; display: block;">
+    </div>
 
     <div class="two-column-container">
       <div class="column">
-        <div class="column-header">カテゴリーA</div>
-        <div class="card">
-          <div class="card-title">特徴１</div>
-          <p style="font-size: 14pt;">詳細な説明をここに記述します。情報の対比を明確にします。</p>
+        <div class="column-header-box">
+          <span class="column-header">カテゴリーA</span>
         </div>
         <div class="card">
-          <div class="card-title">特徴２</div>
-          <p style="font-size: 14pt;">視覚的に整理されたカード形式のレイアウトです。</p>
+          <p class="card-title"><span>特徴１</span></p>
+          <p class="card-text"><span>詳細な説明をここに記述します。情報の対比を明確にします。</span></p>
+        </div>
+        <div class="card">
+          <p class="card-title"><span>特徴２</span></p>
+          <p class="card-text"><span>視覚的に整理されたカード形式のレイアウトです。</span></p>
         </div>
       </div>
 
       <div class="column">
-        <div class="column-header">カテゴリーB</div>
+        <div class="column-header-box">
+          <span class="column-header">カテゴリーB</span>
+        </div>
         <div class="card">
-          <div class="card-title">特徴１</div>
-          <p style="font-size: 14pt;">情報のブロック化により、理解を促進します。</p>
+          <p class="card-title"><span>特徴１</span></p>
+          <p class="card-text"><span>情報のブロック化により、理解を促進します。</span></p>
         </div>
       </div>
     </div>
   </div>
-  <div class="footer">Confidential | 04</div>
+  <div class="footer"><span>Confidential | 04</span></div>
 </body>
 
 </html>

@@ -11,7 +11,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: 20pt;
+      margin-top: 25pt;
     }
 
     .chart-placeholder {
@@ -22,39 +22,62 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+    .placeholder-text {
       color: var(--text-secondary);
       font-style: italic;
+      font-size: 16pt;
     }
 
     .conclusion-banner {
       margin-top: 30pt;
       width: 100%;
-      padding: 15pt;
-      background: var(--accent-gradient);
+      height: 60pt;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .banner-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      border-radius: 4pt;
+    }
+
+    .conclusion-text {
       color: white;
       font-weight: bold;
-      text-align: center;
-      border-radius: 4pt;
+      font-size: 20pt;
+      z-index: 1;
     }
   </style>
 </head>
 
 <body>
   <div class="slide-content">
-    <h2 class="header-with-line">データと図解のタイトル</h2>
+    <div class="header-area">
+      <h2><span>データと図解のタイトル</span></h2>
+      <img src="assets/accent_line.png" style="width: 60pt; height: 3pt; display: block;">
+    </div>
 
     <div class="viz-container">
-      <!-- 図解・グラフのプレースホルダー -->
       <div class="chart-placeholder">
-        ここにグラフや複雑なプロセス図が配置されます
+        <span class="placeholder-text">ここにグラフや複雑なプロセス図が配置されます</span>
       </div>
 
       <div class="conclusion-banner">
-        データから導き出される重要な結論（インサイト）をここに一文で記述します。
+        <img src="assets/bg_gradient.png" class="banner-bg">
+        <span class="conclusion-text">データから導き出される重要な結論をここに記述します。</span>
       </div>
     </div>
   </div>
-  <div class="footer">Confidential | 05</div>
+  <div class="footer"><span>Confidential | 05</span></div>
 </body>
 
 </html>
