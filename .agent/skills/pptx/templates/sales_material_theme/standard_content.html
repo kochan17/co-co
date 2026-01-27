@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/base.css">
+  <style>
+    .content-area {
+      margin-top: 20pt;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 12pt;
+      position: relative;
+      padding-left: 20pt;
+    }
+
+    li::before {
+      content: '●';
+      position: absolute;
+      left: 0;
+      color: var(--accent-orange);
+      font-size: 14pt;
+    }
+
+    .highlight-box {
+      margin-top: 30pt;
+      padding: 15pt;
+      background-color: var(--gray-light);
+      border-left: 5pt solid var(--accent-purple);
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slide-content">
+    <h2 class="header-with-line">標準コンテンツのタイトル</h2>
+
+    <div class="content-area">
+      <ul>
+        <li>重要なポイントの1つ目をここに記述します。</li>
+        <li>2つ目のポイントも同様に、簡潔にまとめます。</li>
+        <li>情報の詰め込みすぎを避け、余白を活かした配置を心がけます。</li>
+      </ul>
+
+      <div class="highlight-box">
+        ここにはスライド全体を通して伝えたい「結論」や「キーメッセージ」を記述します。
+      </div>
+    </div>
+  </div>
+  <div class="footer">Confidential | 03</div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        .slide-content {
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+            z-index: 1;
+        }
+
+        .title-accent-shape {
+            position: absolute;
+            bottom: -50pt;
+            right: -50pt;
+            width: 300pt;
+            height: 300pt;
+            background: var(--accent-gradient);
+            border-radius: 50pt;
+            transform: rotate(-15deg);
+            opacity: 0.9;
+            z-index: 0;
+        }
+
+        .subtitle {
+            margin-top: 10pt;
+            font-size: 24pt;
+            border-left: 4pt solid var(--accent-purple);
+            padding-left: 15pt;
+        }
+
+        .company-info {
+            margin-top: 40pt;
+            font-size: 14pt;
+        }
+    </style>
+</head>
+<body>
+    <div class="title-accent-shape"></div>
+    <div class="slide-content">
+        <h1>タイトルをここに入力</h1>
+        <div class="subtitle text-secondary">サブタイトル・資料の目的を記述します</div>
+        
+        <div class="company-info text-secondary">
+            株式会社ユニ<br>
+            2026年1月27日
+        </div>
+    </div>
+    <div class="footer">Confidential | © Uni Inc.</div>
+</body>
+</html>

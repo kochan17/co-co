@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/base.css">
+  <style>
+    .two-column-container {
+      display: flex;
+      gap: 40pt;
+      margin-top: 20pt;
+      flex-grow: 1;
+    }
+
+    .column {
+      flex: 1;
+    }
+
+    .column-header {
+      font-weight: bold;
+      font-size: 20pt;
+      margin-bottom: 15pt;
+      color: var(--accent-purple);
+      border-bottom: 1px solid var(--divider-color);
+      padding-bottom: 5pt;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--divider-color);
+      padding: 15pt;
+      margin-bottom: 15pt;
+      border-radius: 4pt;
+    }
+
+    .card-title {
+      font-weight: bold;
+      margin-bottom: 5pt;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slide-content">
+    <h2 class="header-with-line">比較・特徴のタイトル</h2>
+
+    <div class="two-column-container">
+      <div class="column">
+        <div class="column-header">カテゴリーA</div>
+        <div class="card">
+          <div class="card-title">特徴１</div>
+          <p style="font-size: 14pt;">詳細な説明をここに記述します。情報の対比を明確にします。</p>
+        </div>
+        <div class="card">
+          <div class="card-title">特徴２</div>
+          <p style="font-size: 14pt;">視覚的に整理されたカード形式のレイアウトです。</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="column-header">カテゴリーB</div>
+        <div class="card">
+          <div class="card-title">特徴１</div>
+          <p style="font-size: 14pt;">情報のブロック化により、理解を促進します。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">Confidential | 04</div>
+</body>
+
+</html>
