@@ -37,21 +37,21 @@ body {
 .slide-content {
     width: 100%;
     height: 100%;
-    padding: 40pt;
+    padding: 36pt 40pt 50pt 40pt;
     display: flex;
     flex-direction: column;
 }
 
 /* Typography styles */
 h1 {
-    font-size: 54pt;
+    font-size: 40pt;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 10pt;
+    margin-bottom: 15pt;
 }
 
 h2 {
-    font-size: 32pt;
+    font-size: 26pt;
     font-weight: 700;
     margin-bottom: 15pt;
     position: relative;
@@ -73,7 +73,7 @@ h2 {
 
 p,
 li {
-    font-size: 18pt;
+    font-size: 16pt;
     line-height: 1.6;
 }
 

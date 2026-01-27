@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/base.css">
     <style>
+        .logo {
+            position: absolute;
+            top: 40pt;
+            left: 40pt;
+            height: 30pt;
+            z-index: 2;
+        }
+
         .slide-content {
             justify-content: center;
             align-items: flex-start;
@@ -14,11 +22,10 @@
 
         .title-accent-img {
             position: absolute;
-            bottom: -100pt;
-            right: -100pt;
-            width: 400pt;
-            height: 400pt;
-            transform: rotate(-15deg);
+            bottom: 0;
+            right: 0;
+            width: 250pt;
+            height: 250pt;
             z-index: 0;
         }
 
@@ -29,7 +36,7 @@
         }
 
         .subtitle {
-            font-size: 24pt;
+            font-size: 20pt;
             color: var(--text-secondary);
         }
 
@@ -38,18 +45,19 @@
         }
 
         .info-text {
-            font-size: 14pt;
+            font-size: 12pt;
             color: var(--text-secondary);
         }
     </style>
 </head>
 
 <body>
+    <img src="assets/co-co_logo.png" class="logo">
     <img src="assets/accent_large.png" class="title-accent-img">
     <div class="slide-content">
         <h1><span>タイトルをここに入力</span></h1>
         <div class="subtitle-box">
-            <span class="subtitle">サブタイトル・資料の目的を記述します</span>
+            <p class="subtitle">サブタイトル・資料の目的を記述します</p>
         </div>
 
         <div class="company-info">

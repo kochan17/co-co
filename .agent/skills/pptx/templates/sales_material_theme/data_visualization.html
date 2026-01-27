@@ -14,20 +14,21 @@
       margin-top: 25pt;
     }
 
-    .chart-placeholder {
+    .placeholder {
       width: 100%;
-      height: 200pt;
-      background: var(--gray-light);
-      border: 1px dashed var(--text-secondary);
+      height: 150pt;
       display: flex;
       justify-content: center;
       align-items: center;
+      border: 1px dashed var(--divider-color);
+      border-radius: 8pt;
+      margin-bottom: 20pt;
     }
 
     .placeholder-text {
       color: var(--text-secondary);
       font-style: italic;
-      font-size: 16pt;
+      font-size: 14pt;
     }
 
     .conclusion-banner {
@@ -53,7 +54,7 @@
     .conclusion-text {
       color: white;
       font-weight: bold;
-      font-size: 20pt;
+      font-size: 18pt;
       z-index: 1;
     }
   </style>
@@ -67,13 +68,13 @@
     </div>
 
     <div class="viz-container">
-      <div class="chart-placeholder">
-        <span class="placeholder-text">ここにグラフや複雑なプロセス図が配置されます</span>
+      <div id="main-chart" class="placeholder">
+        <p class="placeholder-text">ここにグラフや複雑なプロセス図が配置されます</p>
       </div>
 
       <div class="conclusion-banner">
         <img src="assets/bg_gradient.png" class="banner-bg">
-        <span class="conclusion-text">データから導き出される重要な結論をここに記述します。</span>
+        <p class="conclusion-text">データから導き出される重要な結論をここに記述します。</p>
       </div>
     </div>
   </div>

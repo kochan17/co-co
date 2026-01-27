@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/base.css">
+  <style>
+    .diagram-container {
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30pt;
+      padding: 0 10pt;
+    }
+
+    .step-box {
+      width: 190pt;
+      height: 140pt;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 15pt;
+      z-index: 1;
+    }
+
+    .box-bg-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      border-radius: 12pt;
+      opacity: 0.9;
+    }
+
+    .box-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box-accent {
+      position: absolute;
+      top: 0;
+      left: 10%;
+      width: 80%;
+      height: 4pt;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 2pt;
+      z-index: 2;
+    }
+
+    .step-number {
+      font-size: 10pt;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      margin-bottom: 8pt;
+    }
+
+    .step-title {
+      font-size: 15pt;
+      font-weight: 700;
+      color: white;
+      line-height: 1.4;
+    }
+
+    .arrow-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40pt;
+    }
+
+    .arrow-line {
+      width: 25pt;
+      height: 2pt;
+      background-color: #8A2BE2;
+      opacity: 0.4;
+    }
+
+    .arrow-head {
+      width: 0;
+      height: 0;
+      border-left: 6pt solid #8A2BE2;
+      border-top: 5pt solid transparent;
+      border-bottom: 5pt solid transparent;
+      margin-left: -2pt;
+      opacity: 0.4;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slide-content">
+    <div class="header-area">
+      <h2><span>プロセス図の生成</span></h2>
+      <img src="assets/accent_line.png" style="width: 60pt; height: 3pt; display: block;">
+    </div>
+
+    <div class="diagram-container">
+      <div class="step-box">
+        <img src="assets/bg_gradient.png" class="box-bg-img">
+        <div class="box-accent"></div>
+        <div class="box-content">
+          <p class="step-number">STEP 01</p>
+          <p class="step-title">ヒアリング・調査</p>
+        </div>
+      </div>
+
+      <div class="arrow-container">
+        <div class="arrow-line"></div>
+        <div class="arrow-head"></div>
+      </div>
+
+      <div class="step-box">
+        <img src="assets/bg_gradient.png" class="box-bg-img">
+        <div class="box-accent"></div>
+        <div class="box-content">
+          <p class="step-number">STEP 02</p>
+          <p class="step-title">プランニング</p>
+        </div>
+      </div>
+
+      <div class="arrow-container">
+        <div class="arrow-line"></div>
+        <div class="arrow-head"></div>
+      </div>
+
+      <div class="step-box">
+        <img src="assets/bg_gradient.png" class="box-bg-img">
+        <div class="box-accent"></div>
+        <div class="box-content">
+          <p class="step-number">STEP 03</p>
+          <p class="step-title">実行・評価</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Confidential | 06</span></div>
+</body>
+
+</html>
