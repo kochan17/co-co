@@ -200,27 +200,72 @@ class GitHubIntegrator:
             print(f"Error creating issue: {e}")
             return None
 
-    def add_issue_to_project(self, issue_node_id: str, task: Dict, project_id: str, dry_run: bool = False) -> bool:
+    def set_project_field_value(self, item_id: str, field_id: str, value: str, project_id: str) -> bool:
         """
-        IssueをProjects v2に追加し、カスタムフィールドを設定
+        Projects v2のフィールド値を設定 (Date型用)
 
         Args:
-            issue_node_id: IssueのNode ID
-            task: タスク情報
-            project_id: Projects v2のNode ID
-            dry_run: Trueの場合、実際には追加せずログのみ
+            item_id: Project Item ID
+            field_id: Field ID
+            value: 設定する値 (YYYY-MM-DD)
+            project_id: Project ID
 
         Returns:
             成功した場合True
         """
+        graphql_url = "https://api.github.com/graphql"
+        headers = {
+            "Authorization": f"Bearer {self.token}",
+            "Content-Type": "application/json"
+        }
+
+        mutation = """
+        mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $value: Date!) {
+          updateProjectV2ItemFieldValue(input: {
+            projectId: $projectId,
+            itemId: $itemId,
+            fieldId: $fieldId,
+            value: { date: $value }
+          }) {
+            projectV2Item {
+              id
+            }
+          }
+        }
+        """
+
+        variables = {
+            "projectId": project_id,
+            "itemId": item_id,
+            "fieldId": field_id,
+            "value": value
+          }
+
+        try:
+            response = requests.post(
+                graphql_url,
+                headers=headers,
+                json={"query": mutation, "variables": variables}
+            )
+            result = response.json()
+            if "errors" in result:
+                # Type mismatch or field not found
+                return False
+            return True
+        except Exception as e:
+            print(f"Error setting field value: {e}")
+            return False
+
+    def add_issue_to_project(self, issue_node_id: str, task: Dict, project_id: str, dry_run: bool = False) -> bool:
+        """
+        IssueをProjects v2に追加し、カスタムフィールドを設定
+        """
         if dry_run:
             print(f"[DRY RUN] Would add issue to project and set fields:")
-            print(f"  Priority: {task.get('priority')}")
-            print(f"  Size: {task.get('size')}")
-            print(f"  Type: {task.get('type')}")
+            if task.get("due_date"):
+                print(f"  Due Date: {task.get('due_date')}")
             return True
 
-        # GraphQL APIを使用してProjectsに追加
         graphql_url = "https://api.github.com/graphql"
         headers = {
             "Authorization": f"Bearer {self.token}",
@@ -259,10 +304,25 @@ class GitHubIntegrator:
             item_id = result["data"]["addProjectV2ItemById"]["item"]["id"]
             print(f"✓ Added to project (item_id: {item_id})")
 
-            # Step 2: カスタムフィールドを設定
-            # 注: 実際のフィールドIDは、プロジェクト作成時に取得する必要があります
-            # ここでは簡略化のため、設定をスキップします
-            # 本番環境では、フィールドIDを取得して設定する必要があります
+            # Step 2: Due Date を設定 (もし存在すれば)
+            due_date = task.get("due_date")
+            if due_date:
+                # フィールドIDは一旦固定 (PVTF_lAHOBAle8s4BN_dbzg800SA)
+                # 本来的には動的に取得すべきだが、まずは動作優先
+                due_date_field_id = "PVTF_lAHOBAle8s4BN_dbzg800SA"
+                
+                # 日付形式の簡易バリデーション/変換 (YYYY-MM-DD)
+                try:
+                    # もし YYYY/MM/DD などの形式なら変換を試みる
+                    clean_date = due_date.replace("/", "-")
+                    # 基本的なYYYY-MM-DD形式かチェック
+                    datetime.strptime(clean_date, "%Y-%m-%d")
+                    
+                    success = self.set_project_field_value(item_id, due_date_field_id, clean_date, project_id)
+                    if success:
+                        print(f"✓ Set Due Date: {clean_date}")
+                except Exception:
+                    print(f"Warning: Could not set due_date '{due_date}' (invalid format)")
 
             return True
 
