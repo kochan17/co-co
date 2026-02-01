@@ -1,0 +1,31 @@
+{
+  "labels": {
+    "meeting_action": "会議アクション",
+    "task": "タスク",
+    "high_priority": "優先度:高",
+    "medium_priority": "優先度:中",
+    "low_priority": "優先度:低",
+    "feature": "機能",
+    "research": "調査",
+    "chore": "雑務"
+  },
+  "assignees_mapping": {
+    "kotaishida": "kochan17",
+    "tim": "codesigncompany",
+    "sat": "codesigncompany",
+    "tim kazuki": "codesigncompany"
+  },
+  "priority_labels": {
+    "P0 (Critical)": "優先度:高",
+    "P1 (High)": "優先度:高",
+    "P2 (Medium)": "優先度:中",
+    "P3 (Low)": "優先度:低"
+  },
+  "type_labels": {
+    "Feature": "機能",
+    "Bug": "バグ",
+    "Chore": "雑務",
+    "Research": "調査",
+    "Meeting Action": "会議アクション"
+  }
+}

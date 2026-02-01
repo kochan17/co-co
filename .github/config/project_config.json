@@ -1,0 +1,60 @@
+{
+  "project_name": "Co-Co Product Roadmap",
+  "fields": {
+    "status_field": "Status",
+    "priority_field": "Priority",
+    "size_field": "Size",
+    "sprint_field": "Sprint",
+    "due_date_field": "Due Date",
+    "type_field": "Type",
+    "team_field": "Team",
+    "impact_field": "Business Impact"
+  },
+  "default_values": {
+    "status": "Backlog",
+    "priority": "P2 (Medium)",
+    "size": "M (3-5日)",
+    "type": "Meeting Action",
+    "team": "Product"
+  },
+  "status_options": [
+    "Backlog",
+    "Ready",
+    "In Progress",
+    "In Review",
+    "Done",
+    "Blocked"
+  ],
+  "priority_options": [
+    "P0 (Critical)",
+    "P1 (High)",
+    "P2 (Medium)",
+    "P3 (Low)"
+  ],
+  "size_options": [
+    "XS (< 1日)",
+    "S (1-2日)",
+    "M (3-5日)",
+    "L (1-2週)",
+    "XL (2週以上)"
+  ],
+  "type_options": [
+    "Feature",
+    "Bug",
+    "Chore",
+    "Research",
+    "Meeting Action"
+  ],
+  "team_options": [
+    "Product",
+    "Engineering",
+    "Sales",
+    "Operations",
+    "All"
+  ],
+  "impact_options": [
+    "High",
+    "Medium",
+    "Low"
+  ]
+}

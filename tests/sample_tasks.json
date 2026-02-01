@@ -1,0 +1,73 @@
+{
+  "source_file": "tests/sample_meeting.md",
+  "extracted_at": "2026-02-01T17:00:00+09:00",
+  "tasks": [
+    {
+      "title": "カリキュラムと提案資料のドラフトを作成する",
+      "description": "テックキャンプのリソースを活用しつつ、B2B AIトレーニングサービスのカリキュラムと提案資料のドラフトを作成する。他メンバーは添削・フィードバックを担当。",
+      "assignee": "kotaishida",
+      "priority": "P1 (High)",
+      "size": "L (1-2週)",
+      "due_date": null,
+      "type": "Feature",
+      "team": "Product",
+      "business_impact": "High",
+      "dependencies": [],
+      "context": "カリキュラム・提案資料作成：kotaishidaがテックキャンプのリソースも活用しつつ、ドラフトを作成する。他メンバーは添削・フィードバック。"
+    },
+    {
+      "title": "チーム開発プロセスのフレームワークを検討する",
+      "description": "チームビルディング、中間研修コンテンツ等のフレームワークを検討し、実践的なチーム開発プロセスを定義する。",
+      "assignee": "sat",
+      "priority": "P1 (High)",
+      "size": "M (3-5日)",
+      "due_date": null,
+      "type": "Research",
+      "team": "Product",
+      "business_impact": "High",
+      "dependencies": [],
+      "context": "コンテンツの具体化：Satがチーム開発におけるプロセス（チームビルディング、中間研修コンテンツ等）のフレームワークを検討する。"
+    },
+    {
+      "title": "最新テック環境の予算確保と試算を行う",
+      "description": "実験・検証用の最新テック環境に必要な予算を確保し、コストの試算を行う。",
+      "assignee": "tim kazuki",
+      "priority": "P2 (Medium)",
+      "size": "S (1-2日)",
+      "due_date": null,
+      "type": "Chore",
+      "team": "Operations",
+      "business_impact": "Medium",
+      "dependencies": [],
+      "context": "予算・環境整備：tim kazukiが最新のテック環境（実験・検証用）の予算確保と試算を行う。"
+    },
+    {
+      "title": "プライシングを定義する（受講人数・期間・金額）",
+      "description": "B2B AIトレーニングサービスのプライシングを確定する。受講人数、期間（2ヶ月/3ヶ月）、金額をバチッと固める。",
+      "assignee": "kotaishida",
+      "priority": "P0 (Critical)",
+      "size": "M (3-5日)",
+      "due_date": null,
+      "type": "Meeting Action",
+      "team": "Product",
+      "business_impact": "High",
+      "dependencies": [
+        "カリキュラムと提案資料のドラフトを作成する"
+      ],
+      "context": "プライシングの定義：受講人数、期間（2ヶ月/3ヶ月）、金額をバチッと固める。"
+    },
+    {
+      "title": "note等での発信を通じた認知拡大を行う",
+      "description": "note等のプラットフォームで発信し、B2B AIトレーニングサービスの認知拡大を図る。法人研修の受注実績がある外部パートナー（北村氏等）へのヒアリングと連携も模索する。",
+      "assignee": "kotaishida",
+      "priority": "P2 (Medium)",
+      "size": "M (3-5日)",
+      "due_date": null,
+      "type": "Feature",
+      "team": "Sales",
+      "business_impact": "Medium",
+      "dependencies": [],
+      "context": "営業・広報活動：note等での発信を通じた認知拡大。法人研修の受注実績がある外部パートナー（北村氏等）へのヒアリングと連携模索。"
+    }
+  ]
+}
