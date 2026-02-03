@@ -2,3 +2,4 @@ node_modules/
 unpacked_*/
 *.pptx
 !.agent/skills/pptx/scripts/sales_presentation_standardized.pptx
+.env
