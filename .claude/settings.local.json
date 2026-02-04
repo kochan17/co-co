@@ -11,7 +11,8 @@
       "Bash(npm start -- --channel-id 1459787463387123913 --output ./output/export.json)",
       "Bash(git add:*)",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nDiscord チャンネルトーク履歴をエクスポート\n\nチャンネルID 1459787463387123913 の全メッセージ（179件）を JSON 形式でエクスポート\n\nCo-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(git commit -m \"$\\(cat <<''EOF''\n日本語でまとまりのあるコミットをするスキルを追加\n\n変更をまとまりのある単位で分析し、\n日本語で誰が見てもわかるコミットメッセージを生成するスキルを作成した。\n\n機能：\n- 複数ファイルの変更を論理的に分割\n- 機能ごと、修正ごとにコミットを分割\n- シンプル形式（タイトル + 説明）の日本語メッセージ生成\n- よく使うパターン集とスタイルガイド完備\n- 複数コミット分割のワークフロー解説\n\nスキルファイル構成：\n- SKILL.md：メインガイド\n- references/commit-patterns.md：よく使うパターン集\n- references/japanese-style-guide.md：日本語スタイルガイド\n- examples/example-commits.txt：6つの実例\n- examples/multi-commit-flow.md：ワークフロー解説\n\n.claude/skills と .agent/skills の両方に配置。\nEOF\n\\)\")"
+      "Bash(git commit -m \"$\\(cat <<''EOF''\n日本語でまとまりのあるコミットをするスキルを追加\n\n変更をまとまりのある単位で分析し、\n日本語で誰が見てもわかるコミットメッセージを生成するスキルを作成した。\n\n機能：\n- 複数ファイルの変更を論理的に分割\n- 機能ごと、修正ごとにコミットを分割\n- シンプル形式（タイトル + 説明）の日本語メッセージ生成\n- よく使うパターン集とスタイルガイド完備\n- 複数コミット分割のワークフロー解説\n\nスキルファイル構成：\n- SKILL.md：メインガイド\n- references/commit-patterns.md：よく使うパターン集\n- references/japanese-style-guide.md：日本語スタイルガイド\n- examples/example-commits.txt：6つの実例\n- examples/multi-commit-flow.md：ワークフロー解説\n\n.claude/skills と .agent/skills の両方に配置。\nEOF\n\\)\")",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
