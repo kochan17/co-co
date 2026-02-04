@@ -1,15 +1,5 @@
 {
-  "statusLine": {
-    "enabled": true,
-    "style": "compact"
-  },
-  "outputStyle": {
-    "enabled": true,
-    "style": "default"
-  },
-  "hooks": {
-    "enabled": true
-  },
+  "outputStyle": "default",
   "preferences": {
     "autoSave": true,
     "confirmBeforeRunning": false,

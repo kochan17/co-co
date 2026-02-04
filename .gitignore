@@ -3,3 +3,8 @@ unpacked_*/
 *.pptx
 !.agent/skills/pptx/scripts/sales_presentation_standardized.pptx
 .env
+venv_system/
+*.m4a
+transcribe.py
+AGENTS.md
+.claude/settings.local.json
